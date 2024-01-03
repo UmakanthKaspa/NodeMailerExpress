@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Sent</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .response-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+
+        }
+        .response-message:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+
+
+        }
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="response-message">
+        <div class="success-icon">✅</div>
+
+        <h2>Email sent successfully!</h2>
+        <p>Thank you for using our email sender.</p>
+        <button onclick="redirectToSendEmail()">Send Another Email</button>
+    </div>
+
+    <script>
+        function redirectToSendEmail() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

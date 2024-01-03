@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Sender</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-image: url("https://img.freepik.com/premium-photo/business-contact-icons-magenta-phone-email-address-d-rendering_337384-579.jpg");
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+      }
+
+      .email-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .email-form:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+      }
+
+      h2 {
+        color: #007bff;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin: 8px 0;
+        font-weight: bold;
+      }
+
+      .required {
+        color: red;
+        font-size: 16px;
+        margin-left: 4px;
+      }
+
+      input,
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #007bff;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      .note {
+        font-size: 14px;
+        margin-top: -8px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-form">
+      <h2>Email Sender</h2>
+      <form action="/send-email" method="post">
+        <label for="to"
+          >To (comma-separated):<span class="required">*</span></label
+        >
+        <input type="text" id="to" name="to" required />
+
+        <label for="subject">Subject:<span class="required">*</span></label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:<span class="required">*</span></label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <p class="note">You can write plain text or use HTML in the message.</p>
+
+        <!-- <label for="attachments">Attachments:</label>
+        <input
+          type="file"
+          id="attachments"
+          name="attachments"
+          accept=".pdf, .doc, .docx"
+          multiple
+        /> -->
+
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </body>
+</html>
