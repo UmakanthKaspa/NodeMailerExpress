@@ -6,7 +6,7 @@ Welcome to NodeMailerExpress! This Node.js project is my playful exploration of 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/NodeMailerExpress.git
+   https://github.com/UmakanthKaspa/NodeMailerExpress.git
    ```
 
 2. **Install dependencies:**
